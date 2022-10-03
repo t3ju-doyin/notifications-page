@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&display=swap');
+$font: 'Plus Jakarta Sans', sans-serif;
+
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: $font;
+    img{
+        max-width: 8%;
+    }
+    .light-gray{
+        color: $grayish-blue;
+    }
+    .gray-color{
+        color: $dark-grayish-blue
+    }
+    .name{
+        color: $very-dark-blue;
+        font-weight: 600;
+    }
+    
+    .pointer{
+        cursor: pointer;
+    }
+    .new{
+        background-color: $very-light-grayish-blue;
+    }
+    p{
+        font-size: .9rem;
+    }
+    .message-container{
+        display: flex;
+        align-items: flex-end;
+        gap: .5rem;
+    }
+    .red-dot{
+        align-self: center;
+        width: 5px;
+        min-width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $red;
+    }
+}
+header{
+    margin: 2rem 0;
+    .header-container{
+        width: 90%;
+        max-width: 620px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+        .left-header{
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            #number{
+                background-color: $blue;
+                padding: .15rem .5rem;
+                border-radius: 5px;
+                color: $white;
+            }
+        }
+    }
+}
+main{
+    
+    .main-container{
+        width: 95%;
+        max-width: 620px;
+        margin-inline:auto ;
+        margin-bottom: 2rem;
+        img{
+            width: 12%;
+        }
+        .notification{
+            display: flex;
+            gap: .7rem;
+            border-radius: 5px;
+            padding: .6rem .8rem;
+            .message{
+                margin-bottom: .3rem;
+            }
+            img{
+                align-self:flex-start ;
+            }
+            span.post{
+                color: $very-dark-blue;
+                cursor: pointer;
+            }
+            .club{
+                color: $blue;
+                cursor: pointer;
+            }
+            .chess-image{
+                text-align: right;
+                align-self: flex-end;
+                margin-left: auto;
+            }
+           
+        }
+       .notification+.notification{
+        margin-top: .6rem;
+       }
+       .dm{
+            border: 1px solid $light-grayish-blue-1;
+            padding: .8rem 1rem .8rem .8rem;
+            border-radius: 5px;
+            margin-top: .8rem;
+        }
+    }
+    
+    
+}
+@media (min-width: 600px) {
+    body{
+        .dm:hover{
+            background-color: $light-grayish-blue-1;
+        }
+        .hover-blue:hover{
+            color: $blue;
+            transition: 100ms;
+        }
+    }
+}
